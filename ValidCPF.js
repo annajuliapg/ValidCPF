@@ -1,10 +1,8 @@
 //Valide o CPF
 
-function validCPF (cpfString){
+function validCPF (cpf){
 
 	let soma = 0, digito = 0, i, j
-
-	const cpf = cpfString.replace(/\D+/g, '');
 	
 	if(cpf.length != 11) return false
 		
@@ -44,7 +42,11 @@ function validCPF (cpfString){
 //const cpfString = "546.471.429-49"
 const cpfString = prompt("Digite seu CPF ")
 
-if(validCPF(cpfString))
+const cpf = cpfString.replace(/\D+/g, '')
+
+//console.log(cpf);
+
+if(validCPF(cpf))
 	console.log("CPF Válido :D")
 else
 	console.log("CPF Inválido :(")

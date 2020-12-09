@@ -40,12 +40,8 @@ def validCPF (cpf):
 
 	return True
 
+#cpf = "546.471.429-49"
 cpf = input("Digite o CPF: ")
-
-"""
-for char in ".-":
-	cpf = cpf.replace(char, "")
-"""
 
 cpf = re.sub('\D', "", cpf)
 
